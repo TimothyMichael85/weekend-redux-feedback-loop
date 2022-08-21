@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 });
 //end GET
 
-//POST to DB
+//POST new survey to DB
 router.post('/', (req,res) => {
     const newSurvey = req.body;
     console.log('New Survey Results ',newSurvey);
