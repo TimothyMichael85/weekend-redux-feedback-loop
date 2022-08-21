@@ -44,7 +44,20 @@ const feeling = (state = [], action) => {
         default:
             return state;
     }
-};        
+};
+
+//ADD_UNDERSTANDING REDUCER
+const understanding = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_UNDERSTANDING':
+            return action.payload;
+        case 'CLEAR':
+            return [];
+        default:
+            return state;
+    }
+
+};
 
 const store = createStore(
     combineReducers({
@@ -52,6 +65,7 @@ const store = createStore(
         survey,
         comments,
         feeling,
+        understanding,
         // support,
 
      
