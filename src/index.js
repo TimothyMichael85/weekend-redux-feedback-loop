@@ -21,13 +21,26 @@ const survey = (state = [], action) => {
     }
 };
 
+// ADD_COMMENTS REDUCER
+const comments = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_COMMENTS':
+            return action.payload;
+        case 'CLEAR':
+            return [];
+        default:
+            return state;
+    }
+
+};
+
 
 
 const store = createStore(
     combineReducers({
         //LIST REDUCERS HERE
         survey,
-        // comments,
+        comments,
         // feeling,
         // support,
 
