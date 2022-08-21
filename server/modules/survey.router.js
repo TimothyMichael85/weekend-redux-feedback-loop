@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../pool');
+const pool = require('./pool');
 
 //GET existing feedback info from "prime_feedback" DB
 router.get('/', (req, res) => {
-    const queryText = `SELECT * FROM "feedback:`;
+    const queryText = `SELECT * FROM "feedback";`;
 
     pool
         .query(queryText)
         .then (result => {
-            res.send(result.row);
+            res.send(result.rows);
         }).catch(err => {
             console.log('error on router GET', err);
             res.sendStatus(500);

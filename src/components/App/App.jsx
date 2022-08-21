@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 
 import {useSelector, useDispatch} from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 
 //Components

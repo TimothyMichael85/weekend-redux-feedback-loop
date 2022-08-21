@@ -19,7 +19,7 @@ const survey = (state = [], action) => {
         default:
             return state;    
     }
-}
+};
 
 
 
@@ -27,9 +27,9 @@ const store = createStore(
     combineReducers({
         //LIST REDUCERS HERE
         survey,
-        comments,
-        feeling,
-        support,
+        // comments,
+        // feeling,
+        // support,
 
      
     }),
