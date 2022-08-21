@@ -34,14 +34,24 @@ const comments = (state = [], action) => {
 
 };
 
-
+//ADD_FEELING REDUCER
+const feeling = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_FEELING':
+            return action.payload;
+        case 'CLEAR':
+            return [];
+        default:
+            return state;
+    }
+};        
 
 const store = createStore(
     combineReducers({
         //LIST REDUCERS HERE
         survey,
         comments,
-        // feeling,
+        feeling,
         // support,
 
      

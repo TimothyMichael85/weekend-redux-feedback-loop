@@ -67,7 +67,7 @@ function App() {
           <Home />
         </Route>
 
-        {/* <Route path='/feeling'>
+        <Route path='/feeling'>
           <Feeling />
         </Route>
 
@@ -77,7 +77,7 @@ function App() {
 
         <Route path='/support'>
           <Support />
-        </Route> */}
+        </Route>
 
         <Route path='/comments'>
           <Comments />
