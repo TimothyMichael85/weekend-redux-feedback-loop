@@ -55,16 +55,13 @@ function App() {
       
       </header>
       
-      <ul>
       
-        <li className='nav'>
+      
+        <div className='nav'>
 							<Link className='link' to='/'>
 								Home
 							</Link>
-				</li>
-
-      </ul>
-
+				</div>
 
       <Route path='/' exact>
           <Home />
