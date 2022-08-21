@@ -21,18 +21,7 @@ const survey = (state = [], action) => {
     }
 };
 
-// ADD_COMMENTS REDUCER
-const comments = (state = [], action) => {
-    switch (action.type) {
-        case 'ADD_COMMENTS':
-            return action.payload;
-        case 'CLEAR':
-            return [];
-        default:
-            return state;
-    }
 
-};
 
 //ADD_FEELING REDUCER
 const feeling = (state = [], action) => {
@@ -59,6 +48,33 @@ const understanding = (state = [], action) => {
 
 };
 
+//ADD_SUPPORT REDUCER
+const support = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_SUPPORT':
+            return action.payload;
+        case 'CLEAR':
+            return [];
+        default:
+            return state;
+    }
+
+};
+
+// ADD_COMMENTS REDUCER
+const comments = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_COMMENTS':
+            return action.payload;
+        case 'CLEAR':
+            return [];
+        default:
+            return state;
+    }
+
+};
+
+
 const store = createStore(
     combineReducers({
         //LIST REDUCERS HERE
@@ -66,7 +82,7 @@ const store = createStore(
         comments,
         feeling,
         understanding,
-        // support,
+        support,
 
      
     }),

@@ -37,6 +37,7 @@ function Feeling(){
        
             <input 
                 value={feeling}
+                type="number"
                 onChange={(event) => setFeeling(event.target.value)}
                 // I know I should know how to set a max 10 for this input, but I'm absolutely blanking. come back later if time
             />

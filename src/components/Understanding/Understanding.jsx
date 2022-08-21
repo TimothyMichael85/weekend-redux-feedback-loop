@@ -32,6 +32,7 @@ function Understanding(){
 
         <input 
                 value={understanding}
+                type="number"
                 onChange={(event) => setUnderstanding(event.target.value)}
                 // I know I should know how to set a max 10 for this input, but I'm absolutely blanking. come back later if time
                 />

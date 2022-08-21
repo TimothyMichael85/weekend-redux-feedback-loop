@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import axios from 'axios';
 import {useState} from 'react';
 
 function Comments(){
@@ -13,7 +12,7 @@ function Comments(){
         event.preventDefault();
         console.log('submitComments');
         dispatch ({
-            type: ADD_COMMENTS,
+            type: 'ADD_COMMENTS',
             payload: comments
         })
             history.push('/review');
@@ -25,13 +24,15 @@ function Comments(){
         <p>**This is optional**</p>
         <form onSubmit={(event) => submitComments(event)}>
 
-                <input
-                    placeholder="Comments"
-                    // onChange={customer_name}
-                />
+        <input 
+                value={comments}
+                type="text"
+                onChange={(event) => setComments(event.target.value)} 
+                /> 
+                
 
 
-                <button>NEXT</button>
+                <button onClick={submitComments}>NEXT</button>
 
 
             </form>
