@@ -15,7 +15,7 @@ import Home from '../Home/Home';
 import Review from '../Review/Review';
 import Completed from '../Completed/Completed';
 
-//import '@fontsource/roboto';
+//import '@fontsource/roboto'; come back to this if you have time
 
 
 
@@ -28,7 +28,20 @@ function App() {
   }, []);
 
   //GET
-  const getResults = () =>
+  const getResults = () => {
+    axios.get ('/feedback')
+      .then((response) => {
+        console.log(response.data)
+        //DISPATCH
+        dispatch({
+          type: 'SET_SURVEYS',
+          payload: (response.data)
+        })
+      }).catch((err) => {
+        console.error(err);
+      })
+  }
+  //end GET
 
   return (
     <Router>
