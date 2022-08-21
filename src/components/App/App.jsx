@@ -2,6 +2,18 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 
+import {useSelector} from 'react-redux';
+import {HashRouter as Router, Route, Link} from 'react-router-dom';
+
+import Comments from '..Comments/Comments';
+import Feeling from '../Feeling/Feeling';
+import Support from '../Support/Support';
+import Understanding from '../Understanding/Understanding';
+
+import '@fontsource/roboto';
+
+
+
 function App() {
 
   return (
