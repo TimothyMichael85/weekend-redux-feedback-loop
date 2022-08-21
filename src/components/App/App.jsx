@@ -83,13 +83,13 @@ function App() {
           <Comments />
         </Route>
 
-        {/* <Route path='/review'>
-          <Review getSurvey={getSurvey}/>
+        <Route path='/review'>
+          <Review getResults={getResults}/>
         </Route>
 
         <Route path='/completed'>
           <Completed />
-        </Route> */}
+        </Route>
 
       </Router>
     </div>

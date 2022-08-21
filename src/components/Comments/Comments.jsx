@@ -22,20 +22,18 @@ function Comments(){
         <>
         <h2>Comments Page</h2>
         <p>**This is optional**</p>
-        <form onSubmit={(event) => submitComments(event)}>
+        {/* <form onSubmit={(event) => submitComments(event)}> */}
 
-        <input 
+            <input 
                 value={comments}
                 type="text"
                 onChange={(event) => setComments(event.target.value)} 
                 /> 
-                
-
-
+        {/* </form> */}
                 <button onClick={submitComments}>NEXT</button>
 
 
-            </form>
+            
             </>    
     )
 }
