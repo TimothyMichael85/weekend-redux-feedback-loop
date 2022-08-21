@@ -44,14 +44,59 @@ function App() {
   //end GET
 
   return (
-    <Router>
+    
     <div className='App'>
+
+      <Router>
       <header className='App-header'>
+        
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
+      
       </header>
+      
+      <ul>
+      
+        <li className='nav'>
+							<Link className='link' to='/'>
+								Home
+							</Link>
+				</li>
+
+      </ul>
+
+
+      <Route path='/' exact>
+          <Home />
+        </Route>
+
+        {/* <Route path='/feeling'>
+          <Feeling />
+        </Route>
+
+        <Route path='/understanding'>
+          <Understanding />
+        </Route>
+
+        <Route path='/support'>
+          <Support />
+        </Route> */}
+
+        <Route path='/comments'>
+          <Comments />
+        </Route>
+
+        {/* <Route path='/review'>
+          <Review getSurvey={getSurvey}/>
+        </Route>
+
+        <Route path='/completed'>
+          <Completed />
+        </Route> */}
+
+      </Router>
     </div>
-    </Router>
+    
   );
 }
 

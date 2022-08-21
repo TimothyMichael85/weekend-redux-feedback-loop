@@ -20,7 +20,22 @@ function Comments(){
     };
 
     return (
+        <>
         <h2>Comments Page</h2>
+        <p>**This is optional**</p>
+        <form onSubmit={(event) => submitComments(event)}>
+
+                <input
+                    placeholder="Comments"
+                    // onChange={customer_name}
+                />
+
+
+                <button>NEXT</button>
+
+
+            </form>
+            </>    
     )
 }
 
